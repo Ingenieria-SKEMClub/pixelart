@@ -1,22 +1,15 @@
+/*Ivan Valverde🐦*/
+/*Angel Ureña💢*/
 
-.tools {
-    height: 50px;
-    width: 75px;
-    display:grid;
-   grid-template-columns: auto auto auto;
-   margin: auto;
-}
-#editor{
+
+#editor{ 
   text-align: center;
+  height:630px;
+    width:580px;
+    margin: auto;
+  background: #c0c0c0;
 }
-.toolrect {
-
-    height:320px;
-    width:180px;
-    margin:-300px;
-    margin-left:420px;
-
-}
+/*Boxes shapes*/
  .square  {
     height: 100px;
     width: 100px;
@@ -27,16 +20,10 @@
   .square:hover{
     cursor: pointer;
   }
+  /*Create a grid*/
 .contenedor  {
 display:grid;
 grid-template-columns: auto auto auto  auto auto;
 width: 500px;
 margin:auto;
-}
-.center {
-    text-align:center;
-    height:400px;
-    width:580px;
-    background: yellow;
-    margin: auto;
 }

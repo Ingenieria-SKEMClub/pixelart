@@ -1,24 +1,27 @@
-class PixelArt extends React.Component { 
+//Ivan Valverde🐦
+//Angel Ureña💢
+
+class PixelArt extends React.Component { //Declare the compenent 'PixelArt' and its propieties🐦💢
     constructor(props){
         super(props);
         this.state ={
             clicks: 'PixelArt',
             BackgroundsSetBoxColor: [],
             ActualColor: 'white',
-            SetBoxColoreleccionado: "None"
+            SetBoxColoreleccionado: "None" 
         }
     }  
-    componentDidMount(){
+    componentDidMount(){ //Set fisrt color as white by using an array 🐦💢
         let temporalVector = Array(25);
         temporalVector.fill("white");
         this.setState({BackgroundsSetBoxColor: temporalVector});
     }
-    SetBoxColor(box){
+    SetBoxColor(box){ //Change the color of the box selected 🐦💢
         let temporalSetBoxColor = this.state.BackgroundsSetBoxColor;
         temporalSetBoxColor[box]=this.state.ActualColor;
         this.setState({BackgroundsSetBoxColor: temporalSetBoxColor});
     }
-    ChangeColor(color){
+    ChangeColor(color){ //Set the selected color while onclicking the specific color🐦💢
         if(color === "white"){
             this.setState({SetBoxColoreleccionado: "None"});
         }else{
@@ -26,7 +29,7 @@ class PixelArt extends React.Component {
         }
         this.setState({ActualColor: color});
     }
-    CleanEverything(){
+    CleanEverything(){ //Set all boxes to white🐦💢
         let vectorTemporal = this.state.BackgroundsSetBoxColor;
         for(let i = 0; i < vectorTemporal.length; i++ ){
             vectorTemporal[i] = "white"
@@ -37,8 +40,8 @@ class PixelArt extends React.Component {
         return(
             <div id='editor'>
             <p>Bienvenido a {this.state.clicks}</p>
-                <div className="contenedor">
-                    <button className='square' onClick={()=>this.SetBoxColor(0)} style={{'background-color':this.state.BackgroundsSetBoxColor[0]}} >{this.props.text}</button>
+                <div className="contenedor"> {/*All the boxes are defined with their specific funcitions, propieties and ids🐦💢*/}
+                    <button className= 'square' onClick={()=>this.SetBoxColor(0)} style={{'background-color':this.state.BackgroundsSetBoxColor[0]}} >{this.props.text}</button>
                     <button className='square' onClick={()=>this.SetBoxColor(1)} style={{'background-color':this.state.BackgroundsSetBoxColor[1]}} >{this.props.text}</button>
                     <button className='square' onClick={()=>this.SetBoxColor(2)} style={{'background-color':this.state.BackgroundsSetBoxColor[2]}} >{this.props.text}</button>
 
@@ -70,13 +73,14 @@ class PixelArt extends React.Component {
                     <button className='square' onClick={()=>this.SetBoxColor(23)} style={{'background-color':this.state.BackgroundsSetBoxColor[23]}} >{this.props.text}</button>
                     <button className='square' onClick={()=>this.SetBoxColor(24)} style={{'background-color':this.state.BackgroundsSetBoxColor[24]}} >{this.props.text}</button>
                 </div>
-                <button  style={this.tools} onClick={()=> this.ChangeColor("green")} >Verde</button>
-                <button  style={this.tools} onClick={()=> this.ChangeColor("blue")}>Azul</button>
-                <button  style={this.tools} onClick={()=> this.ChangeColor("red")}>Rojo</button>
-                <button  style={this.tools} onClick={()=> this.ChangeColor("yellow")}>Amarillo</button>
-                <button  style={this.tools} onClick={()=> this.ChangeColor("purple")}>Morado</button>
-                <button  style={this.tools} onClick={()=> this.ChangeColor("white")}>Borrador</button>
-                <button  style={this.tools} onClick={()=> this.CleanEverything()}>Borrar Todo</button>
+                {/*All the color tools are defined with their specific funcitions, propieties and colors🐦💢*/}
+                <button   onClick={()=> this.ChangeColor("green")} >Verde</button>
+                <button   onClick={()=> this.ChangeColor("blue")}>Azul</button>
+                <button   onClick={()=> this.ChangeColor("red")}>Rojo</button>
+                <button   onClick={()=> this.ChangeColor("yellow")}>Amarillo</button>
+                <button   onClick={()=> this.ChangeColor("purple")}>Morado</button>
+                <button   onClick={()=> this.ChangeColor("white")}>Borrador</button>
+                <button   onClick={()=> this.CleanEverything()}>Borrar Todo</button>
                 <p>El color actual es: <span style={
                     {color: this.state.ActualColor}
                 }
