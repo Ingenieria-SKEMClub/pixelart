@@ -1,0 +1,34 @@
+.tools {
+    height: 50px;
+    width: 75px;
+    display:grid;
+   grid-template-columns: auto auto auto;
+   margin: auto;
+}
+.toolrect {
+
+    height:320px;
+    width:180px;
+    margin:-300px;
+    margin-left:420px;
+
+}
+
+ .square  {
+    height: 100px;
+    width: 100px;
+  }
+
+.contenedor  {
+display:grid;
+grid-template-columns: auto auto auto ;
+width: 300px;
+margin:auto;
+  }
+.center {
+    text-align:center;
+    height:400px;
+    width:580px;
+    background: yellow;
+    margin: auto;
+}
