@@ -1,9 +1,13 @@
+
 .tools {
     height: 50px;
     width: 75px;
     display:grid;
    grid-template-columns: auto auto auto;
    margin: auto;
+}
+#editor{
+  text-align: center;
 }
 .toolrect {
 
@@ -13,18 +17,22 @@
     margin-left:420px;
 
 }
-
  .square  {
     height: 100px;
     width: 100px;
   }
-
+  .square:focus {
+    outline: none;
+  }
+  .square:hover{
+    cursor: pointer;
+  }
 .contenedor  {
 display:grid;
-grid-template-columns: auto auto auto ;
-width: 300px;
+grid-template-columns: auto auto auto  auto auto;
+width: 500px;
 margin:auto;
-  }
+}
 .center {
     text-align:center;
     height:400px;
